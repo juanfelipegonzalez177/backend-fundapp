@@ -4,7 +4,7 @@ Backend REST con **arquitectura limpia** para la plataforma de voluntariado y do
 
 ---
 
-## 🏗️ Estructura del proyecto
+##  Estructura del proyecto
 
 ```
 fundapp-backend/
@@ -35,7 +35,7 @@ fundapp-backend/
 
 ---
 
-## 🚀 Instalación y ejecución
+##  Instalación y ejecución
 
 ### 1. Clonar e instalar dependencias
 
@@ -67,41 +67,15 @@ JWT_SECRET=tu-jwt-secret   # El mismo que usabas en SUPABASE_JWT_SECRET
 uvicorn app.main:app --reload --port 8000
 ```
 
----
 
-## 📡 Endpoints disponibles
-
-| Método | Ruta | Auth | Descripción |
-|--------|------|------|-------------|
-| POST | `/api/v1/auth/login` | ❌ | Iniciar sesión |
-| POST | `/api/v1/auth/register` | ❌ | Registrar usuario |
-| GET | `/api/v1/auth/me` | ✅ | Usuario actual |
-| GET | `/api/v1/actividades/` | ❌ | Listar actividades |
-| GET | `/api/v1/actividades/{id}` | ❌ | Ver actividad |
-| POST | `/api/v1/actividades/` | 🔐 Admin | Crear actividad |
-| PATCH | `/api/v1/actividades/{id}` | 🔐 Admin | Actualizar actividad |
-| DELETE | `/api/v1/actividades/{id}` | 🔐 Admin | Eliminar actividad |
-| GET | `/api/v1/donaciones/` | ✅ | Mis donaciones (admin: todas) |
-| POST | `/api/v1/donaciones/` | Opcional | Registrar donación |
-| GET | `/api/v1/voluntarios/postulaciones` | ✅ | Mis postulaciones |
-| POST | `/api/v1/voluntarios/postulaciones` | ✅ | Postularse a actividad |
-| PATCH | `/api/v1/voluntarios/postulaciones` | 🔐 Admin | Cambiar estado |
-| GET | `/api/v1/voluntarios/` | 🔐 Admin | Listar voluntarios |
-| GET | `/api/v1/certificados/voluntariado` | ✅ | Certificados de voluntariado |
-| GET | `/api/v1/certificados/donaciones` | ✅ | Certificados de donaciones |
-| POST | `/api/v1/certificados/validar` | ❌ | Validar por documento |
-| GET | `/api/v1/admin/stats` | 🔐 Admin | Estadísticas generales |
-
----
-
-## 📖 Documentación interactiva
+##  Documentación interactiva
 
 - Swagger UI: http://localhost:8000/docs
 - ReDoc: http://localhost:8000/redoc
 
 ---
 
-## 🔐 Autenticación
+##  Autenticación
 
 El API usa **JWT Bearer tokens**. Para endpoints protegidos:
 
